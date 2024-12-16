@@ -1,8 +1,8 @@
 services:
     app:
         build:
-            context: ../..
-            dockerfile: .docker/prod/Dockerfile
+            context: .
+            dockerfile: Dockerfile
         image: laravel-app-prod
         container_name: laravel-app-prod
         restart: unless-stopped
