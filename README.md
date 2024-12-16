@@ -1,12 +1,4 @@
-# Tour de App - Generic boilerplate
-
-Šablona pro vývoj aplikace pro Tour de App obsahující pouze GitHub Action s vytvořením a nahráním výstupu.
-Je potřeba přidat Dockerfile, který na základě zdrojového kódu aplikace vytvoří docker image vaší aplikace. 
-Aplikace může běžet na libovolném portu zpřístupněném pomocí příkazu `EXPOSE PORT_NUMBER` ve vaší Dockerfile.
-
-## Odevzdání
-
-Jak odevzdat svojí aplikaci můžete najít v našich [vzdělávacích materiálech](https://tourde.app/vzdelavaci-materialy/jak-odevzdavat)
+<<<<<<< HEAD
 # Laravel Project with Docker
 
 This project includes Laravel 11, MySQL, and Adminer, set up using Docker Compose. It serves as a quick and convenient environment for Laravel application development.
@@ -157,3 +149,14 @@ php artisan migrate
 - The application is set up for local and production development.
 - Ensure all containers are up and running to avoid connectivity issues.
 - You can use ssl certificate for production environment.
+=======
+# Tour de App - Generic boilerplate
+
+Šablona pro vývoj aplikace pro Tour de App obsahující pouze GitHub Action s vytvořením a nahráním výstupu.
+Je potřeba přidat Dockerfile, který na základě zdrojového kódu aplikace vytvoří docker image vaší aplikace. 
+Aplikace může běžet na libovolném portu zpřístupněném pomocí příkazu `EXPOSE PORT_NUMBER` ve vaší Dockerfile.
+
+## Odevzdání
+
+Jak odevzdat svojí aplikaci můžete najít v našich [vzdělávacích materiálech](https://tourde.app/vzdelavaci-materialy/jak-odevzdavat)
+>>>>>>> edadf729a4e1e9aed92ac76d5c82be8bd85af2da

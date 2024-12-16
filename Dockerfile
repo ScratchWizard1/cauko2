@@ -28,7 +28,7 @@ WORKDIR /var/www
 
 COPY . .
 
-RUN chmod +x .docker/prod/entrypoint.sh
+RUN chmod +x entrypoint.sh
 RUN chown -R www-data:www-data /var/www
 
 EXPOSE 9000

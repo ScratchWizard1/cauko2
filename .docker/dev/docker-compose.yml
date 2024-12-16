@@ -2,7 +2,7 @@ services:
     app:
         build:
             context: ../..
-            dockerfile: .docker/dev/Dockerfile
+            dockerfile: Dockerfile
         container_name: laravel-app-dev
         ports:
             - "8000:8000"
@@ -18,7 +18,7 @@ services:
             - DB_DATABASE=laravel
             - DB_USERNAME=laravel
             - DB_PASSWORD=laravel
-        entrypoint: [ "/bin/bash", "/var/www/.docker/dev/entrypoint.sh" ]
+        entrypoint: [ "/bin/bash", "/var/www/entrypoint.sh" ]
 
     mysql:
         image: mysql:8.0
