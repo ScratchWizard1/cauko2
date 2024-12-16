@@ -28,6 +28,7 @@ WORKDIR /var/www
 
 COPY . .
 
+
 RUN chown -R www-data:www-data /var/www
 
 EXPOSE 9000

@@ -24,7 +24,7 @@ COPY . .
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www
 
-RUN chmod +x .docker/dev/entrypoint.sh
+RUN chmod +x entrypoint.sh
 
 RUN composer install
 RUN php artisan key:generate

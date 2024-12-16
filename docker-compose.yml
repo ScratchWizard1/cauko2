@@ -2,6 +2,7 @@ services:
     app:
         build:
             context: .
+
             dockerfile: Dockerfile
         image: laravel-app-prod
         container_name: laravel-app-prod
