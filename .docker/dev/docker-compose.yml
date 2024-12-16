@@ -1,0 +1,53 @@
+services:
+    app:
+        build:
+            context: ../..
+            dockerfile: .docker/dev/Dockerfile
+        container_name: laravel-app-dev
+        ports:
+            - "8000:8000"
+        volumes:
+            - ../..:/var/www
+        networks:
+            - laravel
+        depends_on:
+            - mysql
+        environment:
+            - DB_HOST=mysql
+            - DB_PORT=3306
+            - DB_DATABASE=laravel
+            - DB_USERNAME=laravel
+            - DB_PASSWORD=laravel
+        entrypoint: [ "/bin/bash", "/var/www/.docker/dev/entrypoint.sh" ]
+
+    mysql:
+        image: mysql:8.0
+        container_name: laravel-mysql-dev
+        environment:
+            MYSQL_ROOT_PASSWORD: laravel
+            MYSQL_DATABASE: laravel
+            MYSQL_PASSWORD: laravel
+            MYSQL_USER: laravel
+        volumes:
+            - dbdata:/var/lib/mysql
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+        networks:
+            - laravel
+        ports:
+            - "3306:3306"
+
+    adminer:
+        image: adminer:latest
+        container_name: laravel-adminer
+        depends_on:
+            - mysql
+        ports:
+            - "8080:8080"
+        networks:
+            - laravel
+
+volumes:
+    dbdata:
+
+networks:
+    laravel:
